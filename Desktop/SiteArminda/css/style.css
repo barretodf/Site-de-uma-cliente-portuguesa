@@ -1,0 +1,348 @@
+body{
+	font-family: nunito, sans-serif;
+	color: #1c1c1c;
+}
+h1, h2, h3{
+	font-family: asap, sans-serif;
+	color: #000000;
+	margin: 5px 50px;
+	font-size: 50px;
+}
+.botao{
+	color: #1c1c1c;
+	text-decoration:none;
+	padding:10px 30px;
+	background-color: #f1f1f1;
+	font-size: .9em;
+	border-radius: 15px;	
+}
+.botao:hover{
+	background-color: #C8B073;
+	box-shadow: 0 0 15px #ECF5F5;
+	color: #fff;
+}
+
+/* Navegação */
+.fundo-header{
+	background-color: #020202;
+	height: 165px;
+    width: 100%;
+}
+
+				/*primeiro menu homem mulher rapz rapariga*/
+.menu1 nav{
+	display: flex;
+	flex-direction: center;
+	align-items: center;
+	margin: 0;
+}
+
+nav a{
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: 500;
+	font-size: 32px;
+	font-family: arial;
+	letter-spacing: 3px;
+}
+.menu1 nav a:hover{	
+	padding: 10px 0;
+	z-index: 1;
+}
+/*ul li{
+	text-decoration: none;
+	display: inline;
+}
+ul li a{
+	float: right;
+	margin-right: 30px; 
+	margin-top: 0;
+}*/
+nav ul{
+	display: flex;
+	flex-direction: center;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	width: 100%;
+}
+nav ul li{
+	margin-right: 30px;
+	text-align: center;
+	width: 115px;
+}
+nav ul li a {	
+	padding: 0;
+	width: 100%;
+	text-decoration: none;
+	color: #fff;
+	margin-left: 15px;
+	font-size: 20px;
+}
+nav ul li a:hover{
+	background: #fff;
+	color: #191970;
+	padding: 5px;
+	border-radius: 5px;
+}
+						/*icones redes sociais*/
+
+.menu2 nav {
+    float: right;
+    display: flex;
+    text-decoration: none;
+    margin-top: -100px;
+}
+.menu2 ul li a{
+	width: 60px;
+}
+header{	    
+	flex-direction: center;
+	align-items: center;
+	background-image: url(../img/camera1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: #ffffff;
+	text-align: center;
+	padding: 20px;
+}
+b, strong {
+	color: #fff;
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+b, strong:hover{
+	font-size: 20px;
+}
+header h1{
+    color: #eaeded;
+    margin-top: 160px;
+
+}
+header p{
+	margin-bottom: 2em;
+	color: #4a4949;
+
+}
+#sobre{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 10px 10px 20px 20px;
+	background-color: #1c1c1c;
+	color: #fff;
+}
+#sobre h2{
+	color: #fff;
+}
+#sobre p{
+	margin-bottom:1.5em;
+	max-width: 1000px;
+}
+#sobre .botao{
+	background-color: #f1f1f1;
+	color: #1c1c1c;
+	font-size: 25px;
+	
+}
+#sobre .botao:hover{
+	font-size: 27px;
+	/*box-shadow: 0 0 10px #74e4f8;*/
+}
+
+/* SERVIÇOS */
+
+#servicos{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 30px;
+}
+#servicos div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-top: 30px;
+}
+#fotos{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 20px; 
+}
+#fotos h2{
+	margin-bottom: 20px;
+}
+#fotos img{
+	width: 100%;
+}
+/*CONTATO*/
+
+#contatos{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 20px;
+}
+
+#contatos h2{
+	color: #000;
+}
+.telefone{
+	color: red;
+}
+
+/*Rodapé*/
+
+footer{
+	text-align: center;
+	padding: 10px;
+	background-color: #1c1c1c;
+	color: #fff;
+}
+
+footer a{
+	text-decoration: none;
+	color: #00ffff;
+}
+
+/*Transformando em responsivo*/
+
+@media screen and (min-width: 768px){
+	nav{
+		float: right;
+
+
+	}
+	nav ul{
+		flex-direction: row;
+		width: 50%;
+		margin: 20px 0px;
+	}
+	/* Cabeçalho */
+
+	header{
+		height: 550px;
+		/*height: 60vh;/*vh tornar dinâmico*/
+		justify-content: center;
+	}
+	img{
+		flex-direction: row;
+		width: 100%;
+	}
+
+	/* Sobre */
+
+	#sobre{
+		height: 250px;
+		height: 30vh;
+		justify-content: center;
+		min-height: 250px
+	}
+	#servicos{
+		flex-direction: row;
+		flex-wrap: wrap;/*quebra de linha*/
+		align-items: flex-start;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+	#servicos h2{
+		text-align: center;
+		width: 100%;
+	}
+	#servicos div{
+		flex-grow: 1;
+		flex-basis:150px;/*Tamanho máximo p todas as flex*/
+		padding: 0 10px;
+	}
+
+	/*Fotos*/
+
+	#fotos{
+		flex-direction: row;
+		flex-wrap: wrap;		
+	}
+	#fotos h2{
+		width: 100%;
+		text-align: center;
+	}
+	#fotos img{
+	padding: 10px;
+	margin-left: 9px;
+    height: 334px;
+    width: 349px;	
+	}
+	/*Contato*/
+
+	#contatos{
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		max-width: 500px;
+		margin: 0 auto;
+	}
+	#contatos h2, #contatos p{
+		width: 100%;
+	}
+	.cam, .filme, .player{
+		margin-bottom: 50px;
+		width: 400px;
+		height: 267px;
+	}
+	.tel, .email {
+		width: 100px;
+	}
+	.site{
+		padding: 10px;
+	}
+	p.site{
+		
+		align-items: center;
+		margin-right: 105px;
+		font-size: 18px;
+		color: #fff;
+		border-radius: 15px;
+		
+	}
+	footer a em{
+		margin-left: 100px;
+		color: #fff;
+	}
+	footer a em:hover{
+		background-color: #0a0ade;
+		padding: 5px;
+		border-radius: 5px;
+		box-shadow: 0 0 5px #bbbbf9;
+	}
+	#homens, #mulheres, #rapazes, #raparigas{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 30px;
+	}
+	img.homens, img.mulheres, img.rapazes, img.raparigas{
+		margin-bottom: 50px;
+		width: 400px;
+		height: 267;
+	}
+
+}
+.logo{
+	width: 300px;	
+	margin: 10 10 10 25;
+	position: absolute;
+}
+#face{
+	color: #a9d1f4;
+	text-decoration: underline;
+}
+#homens{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 30px;
+}
